@@ -16,13 +16,13 @@ def predict():
     '''
     features = [x for x in request.form.values()]
     int_features = []
-    int_features.append(features[0])
-    int_features.append(features[1])
-    int_features.append(features[2])
-    int_features.append(features[3])
-    int_features.append(features[2]-features[3])
-    int_features.append(features[4])
-    int_features.append(features[5])
+    int_features.append(int(features[0]))
+    int_features.append(int(features[1]))
+    int_features.append(int(features[2]))
+    int_features.append(int(features[3]))
+    int_features.append(int(int(features[2])-int(features[3])))
+    int_features.append(int(features[4]))
+    int_features.append(int(features[5]))
     
     # now for tenutre status 
     if features[6] == "Other" :
@@ -239,13 +239,13 @@ def predict():
     prediction = model.predict(final_features)
 
     output = prediction[0]
+    
     if output == 1 :
         outputs = "active"
     else :
         outputs = "inactive"
 
     return render_template('index.html', prediction_text='person is economically {}'.format(outputs))
-
 
 if __name__ == "__main__":
     app.run(debug=True)
