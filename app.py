@@ -192,9 +192,9 @@ def predict():
         int_features.append(0)
     elif features[10] == "No access" :
         int_features.append(0)
+        int_features.append(0)
+        int_features.append(0)
         int_features.append(1)
-        int_features.append(0)
-        int_features.append(0)
     else :
         int_features.append(0)
         int_features.append(0)
@@ -225,9 +225,9 @@ def predict():
         int_features.append(0)
     elif features[12] == "Unemployed" :
         int_features.append(0)
+        int_features.append(0)
+        int_features.append(0)
         int_features.append(1)
-        int_features.append(0)
-        int_features.append(0)
     else :
         int_features.append(0)
         int_features.append(0)
